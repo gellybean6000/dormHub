@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slot booked</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {    
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        a {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #555;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Welcome, <%= eventData.name %>!</h1>
+        <p>You've succefully booked the common room for <strong><%= eventData.date %></strong> at time <strong><%= eventData.time %></strong> hrs. </p><br>
+        <p>Check your email for more details.</p><br>
+        <p>Have a nice day!</p>
+        <a href="/events" >
+            Book another slot
+        </a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        li strong {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Welcome, <%= data.name %>!</h1>
+        <ul>
+            <li><strong>Email:</strong> <%= data.email %></li>
+            <li><strong>Date of Birth:</strong> <%= data.dob %></li>
+            <li><strong>Room Number:</strong> <%= data.room %></li>
+            <li><strong>Department:</strong> <%= data.department %></li>
+        </ul>
+        <a href="/" class="button">>> Back to Home</a>
+        <a href="/events" class="button">>> Organize a Gathering</a>
+    </div>
+</body>
+</html>

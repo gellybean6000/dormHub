@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dormHub-Home</title>
+    <link rel="stylesheet" type="text/css" href="/public/styles/home.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">dormHub</h1>
+      <ul class="nav-links">
+        <li><a href="#" id="explore-button">Explore</a></li>
+        <li><a href="#" id="about-button">About</a></li>
+        <li><a href="#" id="contact-button">Contact</a></li>
+        <a
+          href="/views/login.ejs"
+          onclick="event.preventDefault(); window.location.href = '/login';"
+          >Log in</a
+        >
+      </ul>
+      <img src="/public/img/menu.png" alt="" class="menu-btn" />
+    </nav>
+    <header>
+      <div class="header-content">
+        <h1>Make hostel life easy and fun</h1>
+        <div class="line"></div>
+        <h2>Why not share memories when you share the roof.</h2>
+        <!-- <a href="#" class="ctn">Learn More</a> -->
+      </div>
+    </header>
+
+    <section class="events">
+      <div class="title">
+        <h1>Events</h1>
+        <div class="line"></div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img width="500" src="/public/img/birthday.webp" alt="" />
+          <h4>Birthday Parties</h4>
+          <p>Celebrate the birthdays of your loved ones</p>
+          <a
+            href="#"
+            onclick="event.preventDefault(); window.location.href = '/events';"
+            class="ctn"
+            >Learn More</a
+          >
+        </div>
+        <div class="column">
+          <img width="500" src="/public/img/gather.jpg" alt="" />
+          <h4>Gathering</h4>
+          <p>Schedule your next Student-chapter meeting here</p>
+          <a
+            href="#"
+            onclick="event.preventDefault(); window.location.href = '/events';"
+            class="ctn"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="explore">
+      <div class="explore-content">
+        <h1>Try dormHub</h1>
+        <div class="line"></div>
+        <p>
+          Welcome to dormHub.
+        </p>
+        <br>
+        <p>
+          DormHub is an idea which aims to cater to the needs of university
+          students living in dorms.
+        </p>
+        <br>
+        <p>
+          Dive into the world of dormHub. The best place to meet new people,
+          bond with them and Join the fun by creating an account.
+        </p>
+        <a
+          href="#"
+          onclick="event.preventDefault(); window.location.href = '/signup';"
+          class="ctn"
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <section class="upcoming">
+      <div class="row">
+        <div class="column content-col">
+          <h1>Upcoming Events</h1>
+          <div class="line"></div>
+          <p>
+            Stay updated with upcoming events. Check out the upcoming events and pushpa ante fire kadhu, flower. thagedhe ley.
+          </p>
+          <a href="#" class="ctn">Learn more</a>
+        </div>
+
+        <div class="column image-col">
+          <div class="img-gallery">
+            <img src="/public/img/1.jpg" alt="" />
+            <img src="/public/img/2.jpg" alt="" />
+            <img src="/public/img/3.jpg" alt="" />
+            <img src="/public/img/4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>
+        contact us @ phone: +91 1234567890 | Email: 0lVXj@example.com | Address:
+        Rajiv Gandhi Institute of Petroleum Technology Jais
+      </p>
+      <p>dormHub copyright &copy; 2024</p>
+    </section>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the Explore button
+        const exploreButton = document.querySelector("#explore-button");
+
+        // Get the explore-container div
+        const exploreContainer = document.querySelector(".events");
+
+        // Add click event listener to the Explore button
+        exploreButton.addEventListener("click", function () {
+          // Scroll to the explore-container div
+          exploreContainer.scrollIntoView({
+            behavior: "smooth", // Scroll smoothly
+          });
+        });
+        const aboutButton = document.querySelector("#about-button");
+
+        // Get the explore-container div
+        const aboutContainer = document.querySelector(".explore");
+
+        // Add click event listener to the Explore button
+        aboutButton.addEventListener("click", function () {
+          // Scroll to the explore-container div
+          aboutContainer.scrollIntoView({
+            behavior: "smooth", // Scroll smoothly
+          });
+        });
+        const contactButton = document.querySelector("#contact-button");
+
+        // Get the explore-container div
+        const contactContainer = document.querySelector(".footer");
+
+        // Add click event listener to the Explore button
+        contactButton.addEventListener("click", function () {
+          // Scroll to the explore-container div
+          contactContainer.scrollIntoView({
+            behavior: "smooth", // Scroll smoothly
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

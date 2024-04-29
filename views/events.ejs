@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dormHub-Events</title>
+    <link rel="stylesheet" href="/public/styles/events.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule a gathering</h1>
+        <div class="line"></div>
+        <h2>Book the common room in advance</h2>
+        <form action="/events" method="post">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="text" name="room_number" placeholder="Room Number" required>
+            <select name="Event" placeholder="Choose Event" required>
+                <option value="" disabled selected>Event Type</option>
+                <option value="Birthday">Birthday Party</option>
+                <option value="Computer Science">Festival Gathering</option>
+                <option value="Electronics">Chapter Meeting</option>
+                <option value="Mathematics">Interactions</option>
+            </select>
+            <div class="Date">
+                <p>Date:</p>
+                <input type="date" name="date" required>
+            </div>
+            <div class="line"></div>
+            <div class="Time">
+                <p>Time:</p>
+                <input type="time" name="time" required>
+            </div>
+            <input type="submit" value="Book Slot">
+        </form>
+    </div>
+</body>
+</html>
